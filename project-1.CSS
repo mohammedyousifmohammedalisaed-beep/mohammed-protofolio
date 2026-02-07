@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+:root {
+    --maincolor:
+}
+
+.header {
+    background-color: #F8F6EF;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.mohammed {
+    background-color: #F8F6EF;
+    font-weight: bolder;
+    border: 2px solid black;
+    height: 30px;
+    line-height: 1.6;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.yousif {
+    padding-left: 4px;
+    background-color: #791C2E;
+    color: white;
+    height: 30px;
+    width: 60px;
+    text-align: start;
+    line-height: 1.8;
+    position: absolute;
+    left: 124px;
+    font-weight: bolder;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    height: 30px;
+    /* background-color: black; */
+    /* border: 1px solid black; */
+    margin-left: 10px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    margin-right: 10px;
+}
+
+.icon span {
+    margin-bottom: 5px;
+    border: 2px solid black;
+    width: 100%;
+    height: 0;
+}
+
+.icon span:nth-child(2) {
+    width: 50%;
+    transition: 0.5s;
+    /* right: ; */
+}
+
+.links {
+    position: absolute;
+    right: 12px;
+    top: 70px;
+}
+
+ul {
+    list-style: none;
+    display: none;
+}
+
+ul li:not(:nth-child(4)) {
+    background-color: #F8F6EF;
+    margin-bottom: 0;
+    border-bottom: 2px solid #ddd;
+    width: 200px;
+    padding: 15px 15px 15px 10px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+ul li:nth-child(4) {
+    background-color: #F8F6EF;
+    margin-bottom: 0;
+    width: 200px;
+    padding: 15px 15px 15px 10px;
+    font-weight: bold;
+    transition: 1s;
+    z-index: 1;
+}
+
+.icon:hover span:nth-child(2) {
+    width: 100%;
+}
+
+.Links {
+    width: 30px;
+    height: 200px;
+}
+
+.Links:hover ul {
+    display: inline;
+}
+
+ul li:hover {
+    padding-left: 20px;
+}
+
+.links::after {
+    content: "";
+    width: 0%;
+    height: 0%;
+    border-color: transparent transparent #F8F6EF transparent;
+    border-width: 10px 10px 10px 10px;
+    border-style: solid;
+    position: absolute;
+    top: -19px;
+    right: 4px;
+}
+
+/* about */
+.About {
+    background-color: #F8F6EF;
+}
+
+.container.about {
+    background-color: #791C2E;
+    height: 93.3vb;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px auto;
+    grid-template-areas: "head head" "card desc";
+    justify-content: center;
+}
+
+@media (max-width:767px) {
+    .container.about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto;
+        grid-template-areas: "head" "card" "desc";
+        height: 127vb;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width:650px) {
+    .card {
+        margin-left: 3%;
+    }
+}
+
+@media (min-width:1000px) {
+    .card::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 350px;
+        right: 690px;
+        background-color: #F8F6EF;
+    }
+}
+
+.container.about img {
+    position: absolute;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.card {
+    width: 350px;
+    height: 350px;
+    background-color: #F8F6EF;
+    border-radius: 50%;
+    grid-area: card;
+}
+
+.container.about .header2 {
+    justify-self: center;
+    grid-area: head;
+    font-size: 50px;
+    margin-top: 40px;
+    color: #F8F6EF;
+    opacity: 0.5;
+}
+
+.describ h3 {
+    grid-area: desc;
+    margin: 0;
+    color: #F8F6EF;
+    opacity: 0.5;
+    position: relative;
+    left: 10px;
+
+
+}
+
+.describ h4 {
+    color: #F8F6EF;
+    opacity: 0.5;
+    margin-left: 30px;
+
+}
+
+.describ p {
+    color: black;
+    margin-left: 15px;
+    opacity: 0.7;
+}
+
+.describ h3::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: black;
+    border-radius: 50%;
+    top: 6px;
+    left: -10px;
+}
+
+.describ .c {
+    margin-left: 40px;
+    position: relative;
+}
+
+.describ .c::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #F8F6EF;
+    border-color: transparent transparent transparent #F8F6EF;
+    top: 4px;
+    left: -8px;
+}
+
+.describ .html::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #F8F6EF;
+    border-color: transparent transparent transparent #F8F6EF;
+    top: 4px;
+    left: -8px;
+}
+
+.describ .css::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #F8F6EF;
+    border-color: transparent transparent transparent #F8F6EF;
+    top: 4px;
+    left: -8px;
+}
+
+.describ .html {
+    margin-left: 40px;
+    position: relative;
+}
+
+.describ .css {
+    margin-left: 40px;
+    position: relative;
+}
+
+.container.projects {
+    flex-wrap: wrap;
+}
+
+.pro {
+    width: 100%;
+}
