@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,31 +15,37 @@ body {
     --maincolor:
 }
 
-.header {
-    background-color: #F8F6EF;
+.head {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
 }
 
 .container {
     margin-left: auto;
     margin-right: auto;
-    height: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items: center;
     position: relative;
+    background-color: #F8F6EF;
 }
 
 .mohammed {
     background-color: #F8F6EF;
+    width: 105px;
     font-weight: bolder;
     border: 2px solid black;
     height: 30px;
     line-height: 1.6;
     padding-left: 5px;
     padding-right: 5px;
+    margin-left: 20px;
 }
 
 .yousif {
@@ -54,7 +64,27 @@ body {
 @media (min-width:768px) {
     .container {
         width: 750px;
+    }
 
+    .describ {
+        font-size: 12px;
+    }
+
+    .card {
+        transform: translate(20px, -18px);
+        margin-top: 10%;
+    }
+
+    .projects {
+        top: 140%;
+    }
+
+    .pro {
+        margin-left: 20%;
+    }
+
+    .no {
+        margin-left: 15%;
     }
 }
 
@@ -68,6 +98,23 @@ body {
     .container {
         width: 1170px;
     }
+
+    .card {
+        transform: translate(20px, -18px);
+        margin-top: 10%;
+    }
+
+    .projects {
+        top: 140%;
+    }
+
+    .pro {
+        margin-left: 20%;
+    }
+
+    .no {
+        margin-left: 15%;
+    }
 }
 
 .icon {
@@ -75,14 +122,13 @@ body {
     flex-wrap: wrap;
     width: 30px;
     height: 30px;
-    /* background-color: black; */
-    /* border: 1px solid black; */
     margin-left: 10px;
     justify-content: flex-end;
     position: absolute;
     top: 18px;
-    right: 0;
-    margin-right: 10px;
+    right: 20px;
+    margin-right: 0;
+
 }
 
 .icon span {
@@ -138,7 +184,7 @@ ul li:nth-child(4) {
     height: 200px;
 }
 
-.Links:hover ul {
+.hover:hover ul {
     display: inline;
 }
 
@@ -159,39 +205,66 @@ ul li:hover {
 }
 
 /* about */
-.About {
-    background-color: #F8F6EF;
-}
 
-.container.about {
+.about {
     background-color: #791C2E;
     height: 93.3vb;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50px auto;
-    grid-template-areas: "head head" "card desc";
+    grid-template-areas:
+        "head head"
+        "card desc";
     justify-content: center;
+    width: 100%;
+    top: 60px;
+}
+
+.describ {
+    height: 85%;
+    margin-top: 45px;
+
 }
 
 @media (max-width:767px) {
-    .container.about {
+    .describ {
+        font-size: 16px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:767px) {
+    .about {
         grid-template-columns: 1fr;
         grid-template-rows: 50px auto;
         grid-template-areas: "head" "card" "desc";
-        height: 127vb;
+        height: 129vb;
     }
 }
 
 @media (max-width: 767px) {
     .card {
-        margin-left: 5%;
+        /* margin-left: 5%; */
+        position: absolute;
+        top: 4%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media (max-width: 767px) {
+    .describ {
+        position: absolute;
+        top: 50%;
     }
 }
 
 @media (max-width:650px) {
     .card {
-        margin-left: 3%;
+        /* margin-left: 3%; */
     }
 }
 
@@ -203,10 +276,11 @@ ul li:hover {
         height: 350px;
         right: 690px;
         background-color: #F8F6EF;
+
     }
 }
 
-.container.about img {
+.about img {
     position: absolute;
     width: 350px;
     border-radius: 50%;
@@ -218,13 +292,17 @@ ul li:hover {
     background-color: #F8F6EF;
     border-radius: 50%;
     grid-area: card;
+    margin-left: 0;
+    box-shadow: 0 5px 65px 0;
+
 }
 
-.container.about .header2 {
+.about .header2 {
     justify-self: center;
     grid-area: head;
     font-size: 50px;
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-left: 2%;
     color: #F8F6EF;
     opacity: 0.5;
 }
@@ -235,9 +313,7 @@ ul li:hover {
     color: #F8F6EF;
     opacity: 0.5;
     position: relative;
-    left: 10px;
-
-
+    padding-left: 15px;
 }
 
 .describ h4 {
@@ -261,7 +337,7 @@ ul li:hover {
     background-color: black;
     border-radius: 50%;
     top: 6px;
-    left: -10px;
+    left: 3px;
 }
 
 .describ .c {
@@ -312,10 +388,115 @@ ul li:hover {
     position: relative;
 }
 
-.container.projects {
-    flex-wrap: wrap;
+.projects {
+    display: flex;
+    height: 30vb;
+    width: 750px;
+    padding: 0;
+    position: absolute;
+    bottom: -50%;
+    max-width: 100%;
 }
 
 .pro {
+    width: fit-content;
+    position: absolute;
+    top: -74%;
+    left: 15%;
+    text-align: center;
+    font-size: 45px;
+    color: #791C2E;
+}
+
+.no {
+    position: absolute;
+    font-size: 45px;
+    font-weight: bolder;
+    left: 10%;
+    opacity: 1;
+    color: #F8F6EF;
+    display: flex;
+    flex-direction: column;
+    background-color: #791C2E;
+    padding: 30px;
+    justify-content: center;
+    top: -34%;
+}
+
+.fa-solid {
+    display: none;
+}
+
+.Contact {
+    max-width: 100%;
+    position: absolute;
+    bottom: -94%;
+}
+
+.cont {
+    font-size: 36px;
+    font-weight: bolder;
+    transform: translate(44%, -758%);
+    color: #791C2E;
+    position: absolute;
+}
+
+.word {
+    font-size: 15px;
+    font-weight: bold;
+    transform: translate(76px, -280px);
+    width: fit-content;
+    opacity: 0.5;
+}
+
+.social {
+    transform: translate(56px, -225px);
+    width: 150%;
+}
+
+.social a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    background-color: #791C2E;
+    padding: 20px;
+    padding-left: 60px;
+    border-radius: 5%;
+}
+
+.social i {
+    transform: translate(15px, -38px);
+    color: white;
+}
+
+/* footer */
+.footer {
+    background-color: #791C2E;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: -104%;
+    padding-left: 25%;
+    padding-top: 10%;
+}
+
+.footer .copy {
+    transform: translate(10%, 225%);
+    width: 50%;
+}
+
+.footer .des {
+    transform: translate(0px, -115%)
+}
+
+.footer .hamo {
+    transform: translate();
+}
+
+.fa-solid {
+    --fa-style: 900;
+    letter-spacing: 10px;
+    transform: translate(-94%, 10px);
 }
