@@ -473,7 +473,7 @@ ul li:hover {
 
 /* footer */
 .footer {
-background-color: #791C2E;
+    background-color: #791C2E;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -485,7 +485,7 @@ background-color: #791C2E;
 }
 
 .footer .copy {
-transform: translate(25%, 80%);
+    transform: translate(25%, 80%);
     width: 50%;
 }
 
