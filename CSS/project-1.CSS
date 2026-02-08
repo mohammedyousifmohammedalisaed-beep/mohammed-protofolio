@@ -262,12 +262,6 @@ ul li:hover {
     }
 }
 
-@media (max-width:650px) {
-    .card {
-        /* margin-left: 3%; */
-    }
-}
-
 @media (min-width:1000px) {
     .card::after {
         content: "";
@@ -469,6 +463,7 @@ ul li:hover {
 .social i {
     transform: translate(37px, -37px);
     width: fit-content;
+    color: #F8F6EF;
 }
 
 /* footer */
