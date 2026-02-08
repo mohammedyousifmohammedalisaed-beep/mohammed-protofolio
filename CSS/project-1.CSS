@@ -394,14 +394,14 @@ ul li:hover {
     width: 750px;
     padding: 0;
     position: absolute;
-    bottom: -50%;
+    bottom: -19%;
     max-width: 100%;
 }
 
 .pro {
     width: fit-content;
     position: absolute;
-    top: -74%;
+    top: 55%;
     left: 15%;
     text-align: center;
     font-size: 45px;
@@ -420,7 +420,7 @@ ul li:hover {
     background-color: #791C2E;
     padding: 30px;
     justify-content: center;
-    top: -34%;
+    top: 89%;
 }
 
 .fa-solid {
@@ -430,15 +430,17 @@ ul li:hover {
 .Contact {
     max-width: 100%;
     position: absolute;
-    bottom: -94%;
+    bottom: -98%;
+    height: 20%;
 }
 
 .cont {
-    font-size: 36px;
-    font-weight: bolder;
-    transform: translate(44%, -758%);
+    font-size: 35px;
+    font-weight: bold;
     color: #791C2E;
-    position: absolute;
+    transform: translate(90px, -280px);
+    width: fit-content;
+    opacity: 1;
 }
 
 .word {
@@ -465,25 +467,25 @@ ul li:hover {
 }
 
 .social i {
-    transform: translate(15px, -38px);
-    color: white;
+    transform: translate(37px, -37px);
+    width: fit-content;
 }
 
 /* footer */
 .footer {
-    background-color: #791C2E;
+background-color: #791C2E;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 15%;
     position: absolute;
-    bottom: -104%;
-    padding-left: 25%;
+    bottom: -112%;
+    padding-left: 20%;
     padding-top: 10%;
 }
 
 .footer .copy {
-    transform: translate(10%, 225%);
+transform: translate(25%, 80%);
     width: 50%;
 }
 
